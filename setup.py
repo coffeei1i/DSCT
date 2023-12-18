@@ -8,7 +8,7 @@ setup(
     author='Yiheng Xu',
     license='GPLv3',
     packages=find_packages(),
-    scripts=['DSCT_train.py', 'DSCT_load.py'],
+    scripts=['src/DSCT_train.py', 'src/DSCT_load.py'],
     include_package_data=True,
     install_requires=[
         'torch>=1.7.0',
