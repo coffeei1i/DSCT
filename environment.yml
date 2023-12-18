@@ -1,4 +1,4 @@
-name: myenv
+name: DSCT
 channels:
   - conda-forge
   - defaults
