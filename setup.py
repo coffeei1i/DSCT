@@ -1,22 +1,24 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 
 setup(
-    name='DSCT',               # 应用名
-    version='0.0.1',              # 版本号
+    name='DSCT',
+    version='0.0.1',
     description='Efficient Spatial Transcriptomic Cell Typing Method Using Deep Learning and Attention Mechanisms',
     url='https://github.com/coffeei1i/DSCT/',
     author='Yiheng Xu',
     license='GPLv3',
     packages=find_packages(),
-    scripts=['blob/master/DSCT_train.py','blob/master/DSCT_load.py'],
-    include_package_data=True,    # 启用清单文件MANIFEST.in
-    exclude_package_date={'':['.gitignore']},
-    install_requires = ['scanpy',
-                        'torch',
-                        'diopy',
-                       'pandas',
-                       'matplotlib',
-                        'cosg',
-                       'scipy',
-                       'annadata']
+    scripts=['DSCT_train.py', 'DSCT_load.py'],
+    include_package_data=True,
+    install_requires=[
+        'torch>=1.7.0',
+        'numpy>=1.23.4',
+        'pandas>=2.0.3',
+        'scanpy>=1.9.4',
+        'anndata>=0.9.2',
+        'diopy>=0.5.5',
+        'cosg>=1.0.1',
+        'matplotlib>=3.3.4',
+        'scipy>=1.5.4'
+    ]
 )
