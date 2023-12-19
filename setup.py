@@ -6,7 +6,7 @@ setup(
     description='Efficient Spatial Transcriptomic Cell Typing Method Using Deep Learning and Attention Mechanisms',
     url='https://github.com/coffeei1i/DSCT/',
     author='Yiheng Xu',
-    license='GPLv3',
+    license='GNU General Public License v2.0',
     packages=find_packages(),
     scripts=['src/DSCT_train.py', 'src/DSCT_load.py'],
     include_package_data=True,
