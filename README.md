@@ -15,7 +15,8 @@ cd DSCT
 
 
 ## 🚀 Overview
-![微信截图_20240103012719](https://github.com/coffeei1i/DSCT/assets/97372807/772a5867-9b2b-4326-b55f-2a889309f2ff)
+![figure5](https://github.com/coffeei1i/DSCT/assets/97372807/2dbf66e3-6941-4910-a6cf-1b5a2aabad2b)
+
 ## 🔔 Datasets
 
 - sc_CTX:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
