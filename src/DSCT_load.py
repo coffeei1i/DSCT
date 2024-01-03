@@ -9,6 +9,13 @@ import anndata
 import cosg
 
 from torch.utils.data import DataLoader, TensorDataset
+seed = 4
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+np.random.seed(seed)
+random.seed(seed)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
 
 class AttentionModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
@@ -30,7 +37,7 @@ class AttentionModel(nn.Module):
         
         return output, attention_weights
 def fmap_load(sc_data,st_data,anno,gene_number,device):
-    
+
     sc_data.obs['total_counts'] = sc_data.X.sum(axis=1)
     st_data.obs['total_counts'] = st_data.X.sum(axis=1)
     sc.pp.filter_cells(sc_data, min_counts=0)
@@ -39,15 +46,15 @@ def fmap_load(sc_data,st_data,anno,gene_number,device):
     sc.pp.filter_genes(st_data, min_cells=20)
     corrected_sc_data = sc_data 
     corrected_st_data = st_data 
-    # 获取 sc_data 和 st_data 的基因列表
+ 
     sc_genes = sc_data.var_names
     st_genes = st_data.var_names
-    # 使用集合操作找到共同基因
+
     common_genes = set(sc_genes).intersection(set(st_genes))
-    # 仅保留 sc_data 和 st_data 中共同的基因
+
     sc_data = sc_data[:, list(common_genes)]
     st_data = st_data[:, list(common_genes)]
-    # # 首先，对数据进行预处理，例如归一化和对数缩放
+
     sc.pp.normalize_total(st_data, target_sum=1e4)
     sc.pp.log1p(st_data)
     groupby=anno
@@ -60,31 +67,26 @@ def fmap_load(sc_data,st_data,anno,gene_number,device):
          n_genes_user=gene_number,#之前是175
                    groupby=groupby)
 
-    # 获取高变基因
-    sc.pp.highly_variable_genes(st_data, n_top_genes=10000)#原本是6000
+
+    sc.pp.highly_variable_genes(st_data, n_top_genes=10000)
     high_var_genes = st_data.var[st_data.var['highly_variable']].index
     
-    #取log之后要还回去
+
     st_data = corrected_st_data
-    
-    # 获取每个类别的前个marker基因
-    # sc.tl.rank_genes_groups(sc_data, groupby="annotation", use_raw=False)
-    markers_df = pd.DataFrame(sc_data.uns["cosg"]["names"]).iloc[0:500, :]#原本是3000
+    markers_df = pd.DataFrame(sc_data.uns["cosg"]["names"]).iloc[0:500, :]
 
     marker_genes = set(markers_df.values.flatten().tolist())
-
-    # 计算高变基因和marker基因的交集
     intersect_genes = high_var_genes.intersection(marker_genes)
-    
-        # 在 sc_data 和 st_data 中保留交集基因
     sc_data = sc_data[:, list(intersect_genes)]
     st_data = st_data[:, list(intersect_genes)]
     
+    sorted_genes = sorted(st_data.var_names)
+    st_data = st_data[:, sorted_genes]
+    sc_data = sc_data[:, sorted_genes]
+    
     X = sc_data.X.todense()
-    # 此处仅为示例，您需要确保您的标签是适当的
     y = sc_data.obs[anno].astype('category').cat.codes.values 
 
-    # 2. 将数据移动到设备上
     X_tensor = torch.tensor(X, dtype=torch.float32).to(device)
     y_tensor = torch.tensor(y, dtype=torch.long).to(device)
 
@@ -92,7 +94,7 @@ def fmap_load(sc_data,st_data,anno,gene_number,device):
     hidden_dim = 256
     output_dim = len(set(y))
 
-    # 将模型移动到设备上
+
     model = AttentionModel(input_dim, hidden_dim, output_dim).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     criterion = nn.CrossEntropyLoss()
@@ -109,22 +111,17 @@ def fmap_load(sc_data,st_data,anno,gene_number,device):
         if epoch % 2 == 0:
             print(f"Epoch [{epoch}/{num_epochs}], Loss: {loss.item():.4f}")
 
-    # 查看基因的注意力权重
+ 
     gene_importances = attention_weights.mean(dim=0).detach().cpu().numpy()  # 注意将tensor从GPU移回CPU
-    # 获取基因的名称
     genes = sc_data.var_names.tolist()
-
-    # 对基因按权重进行排序
     sorted_indices = gene_importances.argsort()[::-1]  # 从高到低排序
     sorted_genes = [genes[i] for i in sorted_indices]
     sorted_importances = gene_importances[sorted_indices]
 
-    # 选择前90%的基因
+
     num_to_keep = int(len(sorted_genes) * 0.9)
     selected_genes = sorted_genes[:num_to_keep]
     selected_importances = sorted_importances[:num_to_keep]
-
-    # 使用selected_genes过滤sc_data中的基因
     sc_data = sc_data[:, selected_genes]
     st_data = st_data[:, selected_genes]
     
