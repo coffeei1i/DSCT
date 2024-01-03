@@ -11,6 +11,9 @@ To download and start using this project, execute the following commands in your
 ```bash
 git clone https://github.com/coffeei1i/DSCT.git
 cd DSCT
+conda env create -f environment.yml
+conda activate DSCT
+python setup.py develop
 ```
 
 
