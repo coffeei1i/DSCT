@@ -20,14 +20,8 @@ cd DSCT
 ## 🔔 Datasets
 
 - sc_CTX:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
-- sc_HIP:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
-- st_CTX_human_MERFISH:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
-- st_CTX_mouse_MERFISH:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
-- st_HIP_mouse_10x:
-- st_HIP_mouse_STARmap:
-- st_HIP_mouse_Stereo-seq:
-- st_HIP_mouse_Slide-seq:
-  
+- st_CTX_human_MERFISH_L2-6:https://www.dropbox.com/scl/fi/2nhcaw3mqo8levh0ay67t/CTX_merfish_human.h5?rlkey=1xk3mbk0s2kmr8ms855e5n8wp&dl=0
+
 ## 🤖 Requirements
 ### 第一部分标题
 这里是关于模型第一部分的详细描述。例如，你可以描述模型的构建、使用的数据集或算法的基础。
