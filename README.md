@@ -22,8 +22,10 @@ python setup.py develop
 
 ## 🔔 Datasets
 
-- sc_CTX:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
-- st_CTX_human_MERFISH_ExN:[https://www.dropbox.com/scl/fi/2nhcaw3mqo8levh0ay67t/CTX_merfish_human.h5?rlkey=1xk3mbk0s2kmr8ms855e5n8wp&dl=0](https://www.dropbox.com/scl/fi/um2nxfev080qazzyvv9ww/sc_anno_CTX_human_ExN.h5ad?rlkey=6wo5q2ooiyhv0ldlzs56wj4zx&dl=0)
+- sc_CTX_human:https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0
+- st_CTX_human_MERFISH:[https://www.dropbox.com/scl/fi/2nhcaw3mqo8levh0ay67t/CTX_merfish_human.h5?rlkey=1xk3mbk0s2kmr8ms855e5n8wp&dl=0](https://www.dropbox.com/scl/fi/um2nxfev080qazzyvv9ww/sc_anno_CTX_human_ExN.h5ad?rlkey=6wo5q2ooiyhv0ldlzs56wj4zx&dl=0)
+- sc_CTX_mouse:[https://www.dropbox.com/scl/fi/8tk7kddbb298eqkezdnq7/sc_anno_CTX_human.h5ad?rlkey=ak70sywd8g11oc1kc5r5uc50h&dl=0](https://www.dropbox.com/scl/fi/fqdeqll9ef58k1konqucu/sc_anno_CTX_mouse.h5?rlkey=wb8rc2nu6qwz5sxpz5klangt3&dl=0)
+- st_CTX_mouse_MERFISH:https://www.dropbox.com/scl/fi/q1fsxblinbrlgcmg7l2xy/CTX_merfish_mouse.h5?rlkey=aguqy6vr4in4ad4m0ot71y4wr&dl=0
 
 ## 🤖 Tutorial
 
