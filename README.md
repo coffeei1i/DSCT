@@ -28,7 +28,7 @@ python setup.py develop
 - st_CTX_mouse_MERFISH:https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0
 ## 🤖 Tutorial
 
-see in https://github.com/coffeei1i/DSCT/blob/master/tutorial.ipynb
+see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
 
 
 
