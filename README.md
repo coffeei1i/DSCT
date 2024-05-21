@@ -1,5 +1,5 @@
 # Efficient Spatial Transcriptomic Cell Typing Using Deep Learning and Self-Attention Mechanisms
-![figure1]![figure1_second(ZJL)_final_20240520](https://github.com/coffeei1i/DSCT/assets/97372807/f4bac695-1999-47c3-a8d8-6a6a3ca60f1d)
+![figure1_second(ZJL)_final_20240520](https://github.com/coffeei1i/DSCT/assets/97372807/f4bac695-1999-47c3-a8d8-6a6a3ca60f1d)
 
 
 This repository is the official implementation of DSCT.
