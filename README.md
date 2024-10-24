@@ -24,9 +24,12 @@ python setup.py develop
 ## 🔔 Datasets
 
 - sc_CTX_human:https://www.dropbox.com/scl/fi/20wuibt7wl1j5wcxk8dv4/sc_anno_CTX_human.h5ad?rlkey=8kg7k9oizzyty6oon2ej8dnlj&dl=0
-- st_CTX_human_MERFISH:https://www.dropbox.com/scl/fi/700g03o7jmz27nurvoih2/CTX_merfish_human.h5?rlkey=41i3qdm6pv82awwx7cgnnrutu&dl=0
+- st_CTX_human:https://www.dropbox.com/scl/fi/700g03o7jmz27nurvoih2/CTX_merfish_human.h5?rlkey=41i3qdm6pv82awwx7cgnnrutu&dl=0
 - sc_CTX_mouse:https://www.dropbox.com/scl/fi/5mrfhpm5xsnjaqoj23n9g/sc_anno_CTX_mouse.h5?rlkey=1vx5g3pnhzwg9vkonhcdi0xi4&dl=0
-- st_CTX_mouse_MERFISH:https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0
+- st_CTX_mouse:https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0
+- sc_HIP_mouse_cluster:
+- st_HIP_mouse_cluster_36:
+- st_HIP_mouse_cluster_37:
 ## 🤖 Tutorial
 
 see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
