@@ -1,3 +1,31 @@
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import numpy as np
+import pandas as pd
+import diopy
+import scanpy as sc
+import random
+import anndata
+import cosg
+
+from torch.utils.data import DataLoader, TensorDataset
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+seed=42
+torch.manual_seed(seed)
+np.random.seed(seed)
+random.seed(seed)
+torch.cuda.manual_seed_all(seed)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+from collections import Counter
+# os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+# device = torch.device("cuda:0")
+from matplotlib.lines import Line2D
+import matplotlib.pyplot as plt
+
+
 class AttentionModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(AttentionModel, self).__init__()
