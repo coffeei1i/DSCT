@@ -33,11 +33,11 @@ class MLP(nn.Module):
         out = self.relu3(out)
         out = self.fc4(out)
         out = self.relu4(out)
-#         out = self.fc5(out)
+
 
         out = self.fc5(out)+self.fc6(x)
         return out
-def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_classes,anno,device):
+def fmap_train(sc_data,st_data,result_save_path,model_save_path,plot_save_path,train_num,num_classes,anno):
 
     type_num=len(set(sc_data.obs[anno]))
     num_classes = len(set(sc_data.obs[anno]))
@@ -45,8 +45,8 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
     cell_types_categorical = cell_types.astype("category")
     cell_types_integer = cell_types_categorical.cat.codes
     sc_data.obs["type_integer"] = cell_types_integer
-    num_list = list(range(1, len(st_data.obs)))
-    num_list = list(range(1, len(sc_data.obs)))#应该用这个
+#     num_list = list(range(1, len(st_data.obs)))
+    num_list = list(range(1, len(sc_data.obs)))
     split_idx = int(len(num_list) * 0.8)
 
     train_data = sc_data[:split_idx, :]
@@ -63,7 +63,7 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
     y_valid_tensor = torch.tensor(y_valid, dtype=torch.long)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    seed = 4
+    seed = 81
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
@@ -81,7 +81,16 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
     num_epochs = train_num
     model = MLP(input_size, hidden_size1, hidden_size2, hidden_size3, hidden_size4, num_classes).to(device)
     optimizer = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
-    criterion = nn.CrossEntropyLoss()
+    
+    labels = sc_data.obs[anno] 
+    label_freq = Counter(labels)
+    total_samples = len(labels)
+    num_classes = len(label_freq)
+    alpha = 1.08  
+    weights = {label: (total_samples / (num_classes * count)) ** alpha for label, count in label_freq.items()}
+    weights_tensor = torch.tensor([weights[label] for label in sorted(weights)], dtype=torch.float).to(device)
+    criterion = nn.CrossEntropyLoss(weight=weights_tensor)
+
 
     X_train_tensor = X_train_tensor.to(device)
     y_train_tensor = y_train_tensor.to(device)
@@ -107,7 +116,7 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
                 valid_accuracy = 100 * correct / total
 
             model.train()
-            print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}, Validation Accuracy: {valid_accuracy:.2f}%")
+            print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}")
 
     model_save_path2=model_save_path+".pth"
     torch.save(model.state_dict(), model_save_path2)
@@ -123,6 +132,7 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
 
 
     with torch.no_grad():
+        
         outputs = model(new_data_tensor)
         probabilities = torch.softmax(outputs, dim=1)
         _, predicted = torch.max(outputs.data, 1)
@@ -130,10 +140,10 @@ def fmap_train(sc_data,st_data,result_save_path,model_save_path,train_num,num_cl
 
     probabilities_np = probabilities.cpu().numpy()
     probabilities_df = pd.DataFrame(probabilities_np, columns=cell_types_categorical.cat.categories)
-    result_save_path2=result_save_path+".csv"
+    result_save_path2=result_save_path+"_2.csv"
     probabilities_df.to_csv(result_save_path2, index=False)
     predicted_labels = cell_types_categorical.cat.categories[predicted.cpu()]
     st_data.obs['predicted_classes'] = predicted_labels
-        
+
 
        
