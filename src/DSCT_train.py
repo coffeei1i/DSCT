@@ -7,7 +7,8 @@ import pandas as pd
 import diopy
 import scanpy as sc
 import random
-
+from matplotlib.lines import Line2D
+import matplotlib.pyplot as plt
 
 class MLP(nn.Module):
     def __init__(self, input_size, hidden_size1, hidden_size2, hidden_size3, hidden_size4, num_classes):
