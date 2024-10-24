@@ -28,8 +28,8 @@ python setup.py develop
 - sc_CTX_mouse:https://www.dropbox.com/scl/fi/5mrfhpm5xsnjaqoj23n9g/sc_anno_CTX_mouse.h5?rlkey=1vx5g3pnhzwg9vkonhcdi0xi4&dl=0
 - st_CTX_mouse:https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0
 - sc_HIP_mouse_cluster:
-- st_HIP_mouse_cluster_36:
-- st_HIP_mouse_cluster_37:
+- st_HIP_mouse_cluster_36:https://www.dropbox.com/scl/fi/nfxn73cts2ed24k5mk6b9/HPF_region_36.h5ad?rlkey=8xn8ha159kbgr3iipkl4lb81k&st=1dkq4u8v&dl=0
+- st_HIP_mouse_cluster_37:https://www.dropbox.com/scl/fi/kcob2p52r53qp3mfp0qo7/HPF_region_37.h5ad?rlkey=654w5dm4pc4mtuk0sub8kvub8&st=cwhyg15t&dl=0
 ## 🤖 Tutorial
 
 see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
