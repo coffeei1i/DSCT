@@ -3,9 +3,8 @@
 
 
 This repository is the official implementation of DSCT.
-## 🚨 Download
+## 🚨 environment
 
-## Download
 To download and start using this project, execute the following commands in your terminal:
 
 
