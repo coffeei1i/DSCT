@@ -5,7 +5,7 @@
 This repository is the official implementation of DSCT.
 ## 🚨 Download
 
-## 下载
+## Download
 To download and start using this project, execute the following commands in your terminal:
 
 
@@ -54,6 +54,4 @@ cosg           1.0.1
 
 Should you have any questions, please feel free to contact Mr Xu at yiban@zju.edu.cn.
 
-## 版权和许可证
 
-提供项目的许可证信息。
