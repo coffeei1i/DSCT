@@ -19,7 +19,8 @@ python setup.py develop
 
 
 ## 🚀 Overview
-![1](https://github.com/user-attachments/assets/19afc470-e8c5-4a07-9501-ad6c5dde32c9)
+![1](https://github.com/user-attachments/assets/50253a95-5366-4bfa-9a71-14bd8bd7c301)
+
 
 
 ## 🔔 Datasets
