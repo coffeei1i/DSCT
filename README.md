@@ -19,7 +19,8 @@ python setup.py develop
 
 
 ## 🚀 Overview
-![figure5](https://github.com/coffeei1i/DSCT/assets/97372807/2dbf66e3-6941-4910-a6cf-1b5a2aabad2b)
+![1](https://github.com/user-attachments/assets/19afc470-e8c5-4a07-9501-ad6c5dde32c9)
+
 
 ## 🔔 Datasets
 
