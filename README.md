@@ -43,7 +43,7 @@ To run our code, please install dependency packages.
 ```bash
 python         3.8
 torch          1.7.0
-numpy          1.23.4
+numpy          1.23.4  # which is really important
 pandas         2.0.3
 scanpy         1.9.4
 anndata        0.9.2
