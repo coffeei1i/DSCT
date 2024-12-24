@@ -12,7 +12,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'torch>=1.7.0',
-        'numpy>=1.23.4',
+        'numpy==1.23.4',
         'pandas>=2.0.3',
         'scanpy>=1.9.4',
         'anndata>=0.9.2',
