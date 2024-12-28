@@ -46,7 +46,8 @@ see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
 - Use `%matplotlib inline` for inline plotting in Jupyter notebooks
 - Be aware of potential issues with numpy version 1.23.4
 
-
+Additionally, we have provided a tutorial for setting up the required environment on the online code platform CodeOcean:  
+[https://codeocean.com/capsule/6490820/tree](https://codeocean.com/capsule/6490820/tree)
 
 ## 📚 Requirements
 To run our code, please install dependency packages.
