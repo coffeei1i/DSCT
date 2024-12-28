@@ -32,9 +32,19 @@ python setup.py develop
 - sc_HIP_mouse_cluster:https://www.dropbox.com/scl/fi/e98jvjd34rtt0wzomdk0z/WMB-10Xv3-HPF-DSCT.h5ad?rlkey=ixmgce7fxfqvru3prefnua14k&st=en9h6cab&dl=0
 - st_HIP_mouse_cluster_36:https://www.dropbox.com/scl/fi/nfxn73cts2ed24k5mk6b9/HPF_region_36.h5ad?rlkey=8xn8ha159kbgr3iipkl4lb81k&st=1dkq4u8v&dl=0
 - st_HIP_mouse_cluster_37:https://www.dropbox.com/scl/fi/kcob2p52r53qp3mfp0qo7/HPF_region_37.h5ad?rlkey=654w5dm4pc4mtuk0sub8kvub8&st=cwhyg15t&dl=0
+
+
+
+
 ## 🤖 Tutorial
 
 see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
+## 📝 Important Notes
+
+- If gene names have environment-related duplicates, use the following command to resolve the issue:  
+  `sc_obj.var_names = sc_obj.var_names.astype(str)`
+- Use `%matplotlib inline` for inline plotting in Jupyter notebooks
+- Be aware of potential issues with numpy version 1.23.4
 
 
 
