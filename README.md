@@ -26,19 +26,18 @@ python setup.py develop
 ## 🔔 Datasets
 
 
-- for tutorial_human_cortex.ipynb
-- sc_CTX_human_ExN:https://www.dropbox.com/scl/fi/3nl2fmclkdray82z1mxr4/sc_anno_CTX_human.h5ad?rlkey=ouwtemwux3onf68otq95f2xrb&st=70xle7n1&dl=0
-- st_CTX_human_ExN:https://www.dropbox.com/scl/fi/700g03o7jmz27nurvoih2/CTX_merfish_human.h5?rlkey=41i3qdm6pv82awwx7cgnnrutu&dl=0
-  
-- tutorial_mouse_cortex.ipynb
-- sc_CTX_mouse_ExN:https://www.dropbox.com/scl/fi/5mrfhpm5xsnjaqoj23n9g/sc_anno_CTX_mouse.h5?rlkey=1vx5g3pnhzwg9vkonhcdi0xi4&dl=0
-- st_CTX_mouse_ExN:https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0
+### **Tutorial: Human Cortex**
+- **sc_CTX_human_ExN**: [Download Link](https://www.dropbox.com/scl/fi/3nl2fmclkdray82z1mxr4/sc_anno_CTX_human.h5ad?rlkey=ouwtemwux3onf68otq95f2xrb&st=70xle7n1&dl=0)
+- **st_CTX_human_ExN**: [Download Link](https://www.dropbox.com/scl/fi/700g03o7jmz27nurvoih2/CTX_merfish_human.h5?rlkey=41i3qdm6pv82awwx7cgnnrutu&dl=0)
 
-- for tutorial_HPF_cluster_36_37.ipynb
-- sc_HIP_mouse_cluster:https://www.dropbox.com/scl/fi/e98jvjd34rtt0wzomdk0z/WMB-10Xv3-HPF-DSCT.h5ad?rlkey=ixmgce7fxfqvru3prefnua14k&st=en9h6cab&dl=0
-- st_HIP_mouse_cluster_36:https://www.dropbox.com/scl/fi/nfxn73cts2ed24k5mk6b9/HPF_region_36.h5ad?rlkey=8xn8ha159kbgr3iipkl4lb81k&st=1dkq4u8v&dl=0
-- st_HIP_mouse_cluster_37:https://www.dropbox.com/scl/fi/kcob2p52r53qp3mfp0qo7/HPF_region_37.h5ad?rlkey=654w5dm4pc4mtuk0sub8kvub8&st=cwhyg15t&dl=0
+### **Tutorial: Mouse Cortex**
+- **sc_CTX_mouse_ExN**: [Download Link](https://www.dropbox.com/scl/fi/5mrfhpm5xsnjaqoj23n9g/sc_anno_CTX_mouse.h5?rlkey=1vx5g3pnhzwg9vkonhcdi0xi4&dl=0)
+- **st_CTX_mouse_ExN**: [Download Link](https://www.dropbox.com/scl/fi/63cd9kc3wfjnb0vcigv1e/CTX_merfish_mouse.h5?rlkey=9hdgbu148gv0lvu9g759inouk&dl=0)
 
+### **Tutorial: HPF Cluster 36/37**
+- **sc_HIP_mouse_cluster**: [Download Link](https://www.dropbox.com/scl/fi/e98jvjd34rtt0wzomdk0z/WMB-10Xv3-HPF-DSCT.h5ad?rlkey=ixmgce7fxfqvru3prefnua14k&st=en9h6cab&dl=0)
+- **st_HIP_mouse_cluster_36**: [Download Link](https://www.dropbox.com/scl/fi/nfxn73cts2ed24k5mk6b9/HPF_region_36.h5ad?rlkey=8xn8ha159kbgr3iipkl4lb81k&st=1dkq4u8v&dl=0)
+- **st_HIP_mouse_cluster_37**: [Download Link](https://www.dropbox.com/scl/fi/kcob2p52r53qp3mfp0qo7/HPF_region_37.h5ad?rlkey=654w5dm4pc4mtuk0sub8kvub8&st=cwhyg15t&dl=0)
 
 
 
