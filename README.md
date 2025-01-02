@@ -58,7 +58,7 @@ Additionally, we have provided a tutorial for setting up the required environmen
 To run our code, please install dependency packages.
 ```bash
 python         3.8
-torch          1.7.0
+torch          1.7.1
 numpy          1.23.4  # which is really important
 pandas         2.0.3
 scanpy         1.9.4
