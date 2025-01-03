@@ -52,7 +52,7 @@ see in https://github.com/coffeei1i/DSCT/blob/master/tutorial
   `sc_obj.var_names = sc_obj.var_names.astype(str)`
 - Use `%matplotlib inline` for inline plotting in Jupyter notebooks
 - Be aware of potential issues with numpy version 1.23.4
-
+- You may need to install jupyter by using 'pip install jupyter notebook', and add environment 'python -m ipykernel install --user --name DSCT --display-name "DSCT "'
 Additionally, we have provided a tutorial for setting up the required environment on the online code platform CodeOcean:  
 [https://codeocean.com/capsule/6490820/tree](https://codeocean.com/capsule/6490820/tree)
 
