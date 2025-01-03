@@ -4,7 +4,7 @@ channels:
   - defaults
 dependencies:
   - python==3.8
-  - pip  # 只需要安装pip
+  - pip  
   - pip:
       - torch>=1.7.1
       - numpy==1.23.4
